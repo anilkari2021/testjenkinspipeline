@@ -1,7 +1,6 @@
 FROM node:12
 
-RUN adduser -D ubuntu
-USER ubuntu
+USER node
 
 # To Create nodejsapp directory
 WORKDIR /nodejsapp
