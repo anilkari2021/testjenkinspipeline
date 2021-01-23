@@ -2,7 +2,6 @@
 pipeline {
     agent any
     tools {nodejs 'node'}
-
     stages {
         stage('Build') {
             steps {
@@ -22,9 +21,9 @@ pipeline {
                 sh '''
                 docker build -t nodejsdocker .
 
-                docker tag nodejsdocker anilkari2021/govtech:nodejs_test_${BUILD_NUMBER}
+                docker tag nodejsdocker anilkari2021/govtech:nodejs_${BRANCH_NAME}_${BUILD_NUMBER}
                 docker images
-                docker push anilkari2021/govtech:nodejs_test_${BUILD_NUMBER}
+                docker push anilkari2021/govtech:nodejs_${BRANCH_NAME}_${BUILD_NUMBER}
                 '''
             }
         }
