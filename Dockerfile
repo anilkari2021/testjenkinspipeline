@@ -2,6 +2,10 @@ FROM node:12
 
 USER node
 
+ARG buildtime_variable=Questions.json
+
+ENV DATA_FILE=$buildtime_variable
+
 # To Create nodejsapp directory
 WORKDIR /nodejsapp
 
