@@ -2,6 +2,15 @@
 pipeline {
     agent any
     tools {nodejs 'node'}
+    stage('update version') {
+      when{
+         branch 'release'
+          }
+    steps {
+    echo 'Updating the package version'
+        sh 'sed -i "s/DEPLOY_VESION/1.0.0_${BUILD_NUMBER}/g" package.json 
+            }
+        } 
     stages {
         stage('Build') {
             steps {
