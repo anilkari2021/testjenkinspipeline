@@ -1,7 +1,7 @@
 // Declarative //
 pipeline {
     agent any
-
+    tool {nodejs 'node'}
     stages {
         stage('Build') {
             steps {
@@ -23,7 +23,7 @@ pipeline {
 
                 docker tag nodejsdocker anilkari2021/govtech:nodejs_test_${BUILD_NUMBER}
                 docker images
-                docker push anilkari2021/govtech:nodejs_test_${BUILD_NUMBER}
+                docker push anilkari2021/govtech:nodejs_${BRANCH_NAME}_${BUILD_NUMBER}
                 '''
             }
         }
