@@ -1,6 +1,6 @@
 {
   "name": "one2onetool",
-  "version": "1.0.0",
+  "version": "DEPLOY_VERSION",
   "description": "",
   "main": "index.js",
   "scripts": {
