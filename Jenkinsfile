@@ -1,7 +1,7 @@
 // Declarative //
 pipeline {
     agent any
-    tool {nodejs 'node'}
+    tools {nodejs 'node'}
     stages {
         stage('Build') {
             steps {
