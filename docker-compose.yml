@@ -1,0 +1,8 @@
+version: '3'
+services:
+  mynodeservice:
+    image: anilkari2021/govtech:SELECTION
+    environment:
+      - buildtime_variable=$buildtime_variable
+    ports:
+      - 3000:3000
