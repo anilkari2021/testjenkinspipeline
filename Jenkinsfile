@@ -21,9 +21,9 @@ pipeline {
                 sh '''
                 docker build -t nodejsdocker .
 
-                docker tag nodejsdocker anilkari2021/govtech:nodejs_${BRANCH_NAME}_${BUILD_NUMBER}
+                docker tag nodejsdocker anilkari2021/govtech:${BRANCH_NAME}_${BUILD_NUMBER}
             docker images
-                docker push anilkari2021/govtech:nodejs_${BRANCH_NAME}_${BUILD_NUMBER}
+                docker push anilkari2021/govtech:${BRANCH_NAME}_${BUILD_NUMBER}
                 '''
             }
         }
