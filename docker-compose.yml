@@ -1,7 +1,7 @@
 my-test:
 services:
   mynodeservice:
-    image: anilkari2021/govtech:${SELECTION}
+    image: anilkari2021/govtech:SELECTION
     environment:
       - buildtime_variable=$buildtime_variable
     ports:
