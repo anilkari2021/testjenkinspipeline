@@ -1,4 +1,4 @@
-my-test:
+version: '3'
 services:
   mynodeservice:
     image: anilkari2021/govtech:SELECTION
