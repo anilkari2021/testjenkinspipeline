@@ -52,7 +52,7 @@ pipeline {
                 SELECTION=${BRANCH_NAME}_${BUILD_NUMBER}
                 sed -i "s/SELECTION/${SELECTION}/g" ${WORKSPACE}/docker-compose.yml
                 cat  ${WORKSPACE}/docker-compose.yml
-                scp ${WORKSPACE}/docker-compose.yml ubuntu@3.80.97.156:/home/ubuntu; ssh ubuntu@3.80.97.156 "cd /home/ubuntu && docker-compose stop && docker-compose rm -f && docker image prune -a -f && docker-compose -f /home/ubuntu/docker-compose.yml up -d"
+                scp ${WORKSPACE}/docker-compose.yml ubuntu@34.236.144.86:/home/ubuntu; ssh ubuntu@34.236.144.86 "cd /home/ubuntu && docker-compose stop && docker-compose rm -f && docker image prune -a -f && docker-compose -f /home/ubuntu/docker-compose.yml up -d"
                 '''
              }
         }
