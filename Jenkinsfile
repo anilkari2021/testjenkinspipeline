@@ -58,4 +58,19 @@ pipeline {
              }
         }
     }
+post {
+
+ success {
+  sh 'echo "This will run only if successful"'
+ }
+ failure {
+  sh 'echo "This will run only if failed"'
+  emailext attachLog: true, body: 'Jenkins build failed for $BRANCH_NAME_$BUILD_NUMBER, please verify', subject: 'Jenkins failed ', to: 'anilkari2021@gmail.com'
+ }
+ unstable {
+  sh 'echo "This will run only if the run was marked as unstable"'
+ }
+}    
 }
+
+
