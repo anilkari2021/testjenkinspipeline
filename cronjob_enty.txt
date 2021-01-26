@@ -1,1 +1,0 @@
-0 0 * * * /var/log/test.sh /var/log/apache_logs.txt >> /var/log/output.log
